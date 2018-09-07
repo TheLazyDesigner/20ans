@@ -27,41 +27,75 @@ ul, ul li{
   list-style: none;
 }
 
-.bg-section{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.center-vertical, .center-horizontal{ position: absolute !important; }
+.center-vertical, .center-horizontal,
+.scene-parallax li, .scene-parallax img{ position: absolute !important; }
 .center-vertical{
   top: 50% !important;
   left: 0 !important;
   -webkit-transform: translateY(-50%) translate3d(0,0,0);
+  -moz-transform: translateY(-50%) translate3d(0,0,0);
+  -o-transform: translateX(0%) translateY(-50%);
+  -ms-transform: translateY(-50%) translate3d(0,0,0);
   transform: translateY(-50%) translate3d(0,0,0);
 }
 .center-horizontal{
   top: 0 !important;
   left: 50% !important;
   -webkit-transform: translateX(-50%) translate3d(0,0,0);
+  -moz-transform: translateX(-50%) translate3d(0,0,0);
+  -o-transform: translateX(-50%) translateY(0%);
+  -ms-transform: translateX(-50%) translate3d(0,0,0);
   transform: translateX(-50%) translate3d(0,0,0);
 }
-.center-vertical.center-horizontal{
+.center-vertical.center-horizontal,
+.scene-parallax li, .scene-parallax img{
   top: 50% !important;
   left: 50% !important;
   -webkit-transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
+  -moz-transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
   transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
+}
+.scene-parallax li#age img{
+  -webkit-transform: translateX(-50%) translateY(-49%) translate3d(0,0,0);
+  -moz-transform: translateX(-50%) translateY(-49%) translate3d(0,0,0);
+  -o-transform: translateX(-50%) translateY(-49%);
+  -ms-transform: translateX(-50%) translateY(-49%) translate3d(0,0,0);
+  transform: translateX(-50%) translateY(-49%) translate3d(0,0,0);
+}
+.scene-parallax li.ballon img{
+  -webkit-transform: translateX(-50%) translateY(-45%) translate3d(0,0,0);
+  -moz-transform: translateX(-50%) translateY(-45%) translate3d(0,0,0);
+  -o-transform: translateX(-50%) translateY(-45%);
+  -ms-transform: translateX(-50%) translateY(-45%) translate3d(0,0,0);
+  transform: translateX(-50%) translateY(-45%) translate3d(0,0,0);
+}
+@media (max-width: 899px) and (min-height: 419px) {
+  .scene-parallax li#age img{
+    -webkit-transform: translateX(-50%) translateY(-45%) translate3d(0,0,0);
+    -moz-transform: translateX(-50%) translateY(-45%) translate3d(0,0,0);
+    -o-transform: translateX(-50%) translateY(-45%);
+    -ms-transform: translateX(-50%) translateY(-45%) translate3d(0,0,0);
+    transform: translateX(-50%) translateY(-45%) translate3d(0,0,0);
+  }
+  .scene-parallax li.ballon img{
+    -webkit-transform: translateX(-50%) translateY(-40%) translate3d(0,0,0);
+    -moz-transform: translateX(-50%) translateY(-40%) translate3d(0,0,0);
+    -o-transform: translateX(-50%) translateY(-40%);
+    -ms-transform: translateX(-50%) translateY(-40%) translate3d(0,0,0);
+    transform: translateX(-50%) translateY(-40%) translate3d(0,0,0);
+  }
 }
 
 /*--------------------------------------------------------- COLORS & BACKGROUNDS ---------------------------------------------------------*/
-html, body{ background-color: #F2C7C6 !important; }
+html, body{ background-color: #D59392 !important; }
 
-.bg-section{
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+body{
+  background: -moz-radial-gradient(center, ellipse cover, #e8bebc 0%, #d59392 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #e8bebc 0%,#d59392 100%);
+  background: radial-gradient(ellipse at center, #e8bebc 0%,#d59392 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8bebc', endColorstr='#d59392',GradientType=1 );
 }
 
 /*--------------------------------------------------------- PARALLAX ---------------------------------------------------------*/
@@ -71,76 +105,110 @@ html, body{ background-color: #F2C7C6 !important; }
   height: 100%;
 }
 
-.scene-parallax,
-.scene-parallax li{
-  width: 100% !important;
-  height: 100% !important;
+.scene-parallax{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.scene-parallax li.ballon{
+  width: 30%;
+  min-width: 50px;
+}
+.scene-parallax li#ballon-1{
+  max-width: 8.5vw;
+  margin-left: -38%;
+  margin-top: -13%;
+}
+.scene-parallax li#ballon-2{
+  max-width: 8vw;
+  margin-left: 35%;
+  margin-top: 20%;
+}
+.scene-parallax li#ballon-3{
+  max-width: 8vw;
+  margin-left: -17%;
+  margin-top: -11%;
+}
+.scene-parallax li#ballon-4{
+  max-width: 8.1vw;
+  margin-left: 45%;
+  margin-top: 5%;
+}
+.scene-parallax li#ballon-5{
+  max-width: 9vw;
+  margin-left: 35%;
+  margin-top: -8%;
+}
+.scene-parallax li#ballon-6{
+  max-width: 7.8vw;
+  margin-left: -43%;
+  margin-top: 10%;
+}
+.scene-parallax li#ballon-7{
+  max-width: 7.3vw;
+  margin-left: -32%;
+  margin-top: 21%;
+}
+.scene-parallax li#ballon-8{
+  max-width: 7vw;
+  margin-left: 12%;
+  margin-top: -13%;
+}
+.scene-parallax li#age{
+  width: 60%;
+  height: 50%;
+  margin-top: -1%;
+}
+.scene-parallax li#logo{
+  width: 90%;
+  height: 100%;
+  margin-top: 1%;
 }
 .scene-parallax img{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  
-  -webkit-transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
-  -moz-transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
-  -o-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
-  transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
-}
-
-#logo img{ width: 50%; }
-.leaves img,
-.flower img{
-  width: 200%;
+  display: block;
+  width: 100%;
   height: auto;
 }
-.flower img{ position: absolute; }
-
-#flower-1 img{ top: 0; }
-#flower-2 img{ top: 98%; }
-#flower-3 img{ top: 120%; }
-#flower-4 img{ 
-  top: 85%;
-  -webkit-transform-origin: 20% 0;
-  transform-origin: 20% 0;
+@media (max-height: 420px) and (min-width: 900px) {
+  .scene-parallax li#age img, .scene-parallax li#logo img{
+    width: auto;
+    height: 100%;
+  }
 }
-#flower-5 img{ top: 75%; }
-#flower-6 img{ top: -15%; }
-#flower-7 img{ top: -25%; }
-
-#flower-01 img{ top: -8%; }
-#flower-02 img{ top: 0%; }
-#flower-03 img{ top: 22%; }
-#flower-04 img{ top: 68%; }
-
-#flower-001 img{
-  top: 80%;
-  -webkit-transform-origin: -20% 0;
-  transform-origin: -20% 0;
-}
-#flower-002 img{ top: 5%; }
-
-.butterfly_container{
-  position: absolute;
-  left: 120%;
-  top: 60%;
-  z-index: 1000;
-}
-
-/*--------------------------------------------------------- CANVAS LEAVES DISTORTION ---------------------------------------------------------*/
-.canvas-leaves{
-	position: absolute;
-	overflow: hidden;
-  top: 0;
-  left: 0;
-	width: 100%;
-	height: 100vh;
-}
-.canvas-leaves canvas{
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
+@media (max-width: 899px) and (min-height: 419px) {
+  .scene-parallax li.ballon{ margin: 0 !important; }
+  .scene-parallax li#ballon-1{
+    left: 12% !important;
+    top: 25% !important;
+  }
+  .scene-parallax li#ballon-2{
+    left: 83% !important;
+    top: 83% !important;
+  }
+  .scene-parallax li#ballon-3{
+    left: 34% !important;
+    top: 30% !important;
+  }
+  .scene-parallax li#ballon-4{
+    left: 94% !important;
+    top: 59% !important;
+  }
+  .scene-parallax li#ballon-5{
+    left: 84% !important;
+    top: 27% !important;
+  }
+  .scene-parallax li#ballon-6{
+    left: 8% !important;
+    top: 66% !important;
+  }
+  .scene-parallax li#ballon-7{
+    left: 18% !important;
+    top: 87% !important;
+  }
+  .scene-parallax li#ballon-8{
+    left: 62% !important;
+    top: 20% !important;
+  }
 }
 
 /*--------------------------------------------------------- OPACITY ---------------------------------------------------------*/

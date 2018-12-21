@@ -163,17 +163,31 @@ body,
 }
 .scene-parallax .layer-img-wrapper{
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
-.scene-parallax img{
-   width: 100vw;
-   height: auto;
-
+.layer-img-wrapper img, .layer-img-wrapper svg{
+   position: absolute;
+   right: 0;
+   width: auto;
+   height: 100vh;
 }
 
+/* Ration minimal */
+@media (min-aspect-ratio: 16/9) {
+   .layer-img-wrapper img, .layer-img-wrapper svg{
+      width: 100vw;
+      height: auto;
+      bottom: 0;
+   }
+}
+
+/* Ratio maximal */
+@media (max-aspect-ratio: 2/1) {
+
+}
 
 .snowflake{
   background: url(../images/snowflake.png) no-repeat center center;

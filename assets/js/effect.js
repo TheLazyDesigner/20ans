@@ -1,1 +1,27 @@
-function fitAll(){w=$(window).width(),h=$(window).height()}var w=0,h=0;$(window).on("load",function(){$(window).on("resize",function(){fitAll()})}),$(document).ready(function(){function e(a){TweenMax.to(a,f(6,15),{y:h+100,ease:Linear.easeNone,repeat:-1,delay:-15}),TweenMax.to(a,f(4,8),{x:"+=100",rotationZ:f(0,180),repeat:-1,yoyo:!0,ease:Sine.easeInOut}),TweenMax.to(a,f(2,8),{rotationX:f(0,360),rotationY:f(0,360),repeat:-1,yoyo:!0,ease:Sine.easeInOut,delay:-5})}function f(a,b){return a+Math.random()*(b-a)}fitAll();TweenLite.set("#feuilles",{perspective:600}),TweenLite.set("#feuilles img",{xPercent:"-50%",yPercent:"-50%"});var b=20,c=document.getElementById("feuilles");for(i=0;i<b;i++){var d=document.createElement("div");TweenLite.set(d,{attr:{"class":"dot"},x:f(0,w),y:f(-200,-150),z:f(-200,200)}),c.appendChild(d),e(d)}});
+$(window).on('load', function() {});
+$(document).ready(function() {
+
+	var currentTime = new Date().getHours();
+	console.log(currentTime);
+	if (17 <= currentTime || currentTime < 8) {
+		console.log('night time');
+	} else {
+		console.log('daytime');
+		$('#layer-3, #layer-4, #layer-5').remove()
+	}
+
+	setInterval(function() {
+		$('.svg_lights_layer').css('opacity', Math.random());
+	}, 500)
+	// console.log($('#stars path'));
+	$('#stars path').each(function(index, val) {
+		setInterval(function() {
+			if (Math.random() > 0.5) {
+				var opacity = 1;
+			} else {
+				var opacity = 0
+			}
+			$(val).css('opacity', opacity);
+		}, 200);
+	});
+});

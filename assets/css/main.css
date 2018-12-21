@@ -170,7 +170,7 @@ body,
 }
 .layer-img-wrapper img, .layer-img-wrapper svg{
    position: absolute;
-   left: -150vw;
+   left: -110vw;
    width: auto;
    height: 100vh;
 }
@@ -179,6 +179,7 @@ body,
 @media screen and (orientation:landscape) {
    .layer-img-wrapper img, .layer-img-wrapper svg{
       left:0;
+      bottom:0
    }
 }
 /* // ********* TABLET */

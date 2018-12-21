@@ -170,10 +170,44 @@ body,
 }
 .layer-img-wrapper img, .layer-img-wrapper svg{
    position: absolute;
-   right: 0;
+   left: -150vw;
    width: auto;
    height: 100vh;
 }
+
+/* // ******** MOBILE LANDSCAPE */
+@media screen and (orientation:landscape) {
+   .layer-img-wrapper img, .layer-img-wrapper svg{
+      left:0;
+   }
+}
+/* // ********* TABLET */
+@media screen and (min-width: 414px) and (orientation:landscape) {
+   .layer-img-wrapper img, .layer-img-wrapper svg{
+      /* left:-70vw; */
+   }
+}
+/* // ********* & PORTRAIT */
+@media screen and (min-width: 414px) and (orientation:portrait) {
+   /* .layer-img-wrapper img, .layer-img-wrapper svg{
+      left:-100vw;
+   } */
+}
+/* // LARGE PHONES LANDSCAPE */
+@media screen and (min-width: 736px) and (orientation:landscape) {
+   .layer-img-wrapper img, .layer-img-wrapper svg{
+      left:0;
+   }
+}
+/* // ********* TABLET PORTRAIT */
+@media screen and (min-width: 768px) and (orientation:portrait) {
+   .layer-img-wrapper img, .layer-img-wrapper svg{
+      left:-70vw;
+   }
+}
+
+
+
 
 /* Ration minimal */
 @media (min-aspect-ratio: 16/9) {

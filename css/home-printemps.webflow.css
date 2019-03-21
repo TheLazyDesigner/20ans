@@ -1,0 +1,124 @@
+.sky {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../images/ciel.svg');
+  background-position: 50% 0%;
+  background-size: cover;
+}
+
+.ground {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 50;
+  background-image: url('../images/base.svg');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.water_1 {
+  position: fixed;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 3%;
+  z-index: 100;
+  width: 130vw;
+  height: 80px;
+  background-image: url('../images/eau3.svg');
+  background-position: 100% 50%;
+  background-size: auto;
+  background-repeat: repeat-x;
+}
+
+.water_2 {
+  position: fixed;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
+  z-index: 110;
+  width: 130vw;
+  height: 80px;
+  background-image: url('../images/eau2.svg');
+  background-position: 100% 50%;
+  background-size: auto;
+  background-repeat: repeat-x;
+}
+
+.water_3 {
+  position: fixed;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: -2%;
+  z-index: 120;
+  width: 130vw;
+  height: 80px;
+  background-image: url('../images/eau1.svg');
+  background-position: 100% 50%;
+  background-size: auto;
+  background-repeat: repeat-x;
+}
+
+.light {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 200;
+  opacity: 0.41;
+}
+
+.montgolfiere {
+  position: fixed;
+  left: 34%;
+  top: 6%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 250;
+}
+
+.cloud_1 {
+  position: fixed;
+  left: 505px;
+  top: 168px;
+  z-index: 260;
+}
+
+.cloud_2 {
+  position: fixed;
+  left: 152px;
+  top: 95px;
+  z-index: 260;
+}
+
+.cloud_3 {
+  position: fixed;
+  left: 1041px;
+  top: 77px;
+  z-index: 260;
+}
+
+.cloud_4 {
+  position: fixed;
+  left: 1498px;
+  top: 225px;
+  z-index: 260;
+}
+
+.cloud_5 {
+  position: fixed;
+  left: 1293px;
+  top: 110px;
+  z-index: 260;
+}
